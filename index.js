@@ -1,5 +1,5 @@
 var Server = require('ws').Server
-const wss = new Server({ port: 8888 })
+const wss = new Server({ port: process.env.PORT || 8888 })
 const users = {}
 
 wss.on('listening', () => {
